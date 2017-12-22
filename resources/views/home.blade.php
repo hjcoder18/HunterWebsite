@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('top-nav')
+	@include('_includes.nav.professional')
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
