@@ -15,7 +15,7 @@
     @yield('styles')
 </head>
 <body>
-	@include('_includes.nav.main')
+	@yield('top-nav')
     <div id="app">
         @yield('content')
     </div>
