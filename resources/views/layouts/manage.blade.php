@@ -17,7 +17,7 @@
 <body>
 	@yield('top-nav')
 	@yield('side-nav')
-    <div id="app">
+    <div class="management-area" id="app">
         @yield('content')
     </div>
 
