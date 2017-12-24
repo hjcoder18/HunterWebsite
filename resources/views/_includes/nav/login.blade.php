@@ -41,7 +41,7 @@
 	    
 	    <div class="navbar-end">
 	      	<div class="navbar-item has-dropdown is-hoverable">
-		      	@if (Auth::guest())
+		      	@guest
 		      		<a href="#" class="navbar-item is-tab">Login</a>
 		      		<a href="#" class="navbar-item is-tab">Register</a>
 		      	@else
@@ -73,7 +73,7 @@
 			              	@include('_includes.forms.logout')
 				      	</div>
 				    </div>
-		      	@endif
+		      	@endguest
 	      	</div>
 			
 	    </div>
