@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('top-nav')
-	@include('_includes.nav.professional')
+	@include('_includes.nav.login')
 @endsection
 
 @section('content')

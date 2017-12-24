@@ -56,8 +56,11 @@
 				      	<a class="navbar-item">
 				       		Elements
 				      	</a>
-				      	<a class="navbar-item">
-				        	Components
+				      	<a href="{{route('manage.dashboard')}}" class="navbar-item">
+				      		<span class="icon">
+				      			<i class="fa fa-fw fa-cog m-r-5"></i>
+				      		</span>
+				        	Manage
 				      	</a>
 				      	<hr class="navbar-divider">
 				      	<div class="navbar-item">

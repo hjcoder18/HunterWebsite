@@ -2,7 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/_variables.css": "/css/_variables.css",
     "/css/app.css": "/css/app.css",
+    "/css/overrides.css": "/css/overrides.css",
     "/css/helpers.css": "/css/helpers.css",
-    "/css/styles.css": "/css/styles.css",
-    "/css/overrides.css": "/css/overrides.css"
+    "/css/styles.css": "/css/styles.css"
 }
