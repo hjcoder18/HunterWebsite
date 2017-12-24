@@ -12,7 +12,13 @@
 	  </p>
 	  <ul class="menu-list">
 	    <li><a href="{{route('users.index')}}">Manage Users</a></li>
-	    <li><a href="{{route('permissions.index')}}">Roles & Permissions</a></li>
+	    <li>
+	    <a href="{{route('permissions.index')}}">Roles & Permissions</a>
+	    <ul>
+	    	<li><a href="{{route('roles.index')}}">Roles</a></li>
+	    	<li><a href="{{route('permissions.index')}}">Permissions</a></li>
+	    </ul>
+	    </li>
 	  </ul>
 	  <p class="menu-label">
 	    Transactions

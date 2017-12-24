@@ -24,8 +24,7 @@
 	</div>
 	<hr class="m-t-0">
 
-	<form action="{{route('permissions.update', $permission->id)}}"
-		method="POST">
+	<form action="{{route('permissions.update', $permission->id)}}" method="POST">
 		{{csrf_field()}} {{method_field('PUT')}}
 
 		<div class="field">
