@@ -29,22 +29,19 @@
 								<div class="field">
 									<p class="control">
 										<label for="display_name" class="label">Name (Human Readable)</label>
-										<input type="text" class="input" name="display_name"
-											value="{{old('display_name')}}" id="display_name">
+										<input type="text" class="input" name="display_name" value="{{old('display_name')}}" id="display_name">
 									</p>
 								</div>
 								<div class="field">
 									<p class="control">
 										<label for="name" class="label">Slug (Can not be changed)</label>
-										<input type="text" class="input" name="name"
-											value="{{old('name')}}" id="name">
+										<input type="text" class="input" name="name" value="{{old('name')}}" id="name">
 									</p>
 								</div>
 								<div class="field">
 									<p class="control">
-										<label for="description" class="label">Description</label> <input
-											type="text" class="input" value="{{old('description')}}"
-											id="description" name="description">
+										<label for="description" class="label">Description</label>
+										<input type="text" class="input" value="{{old('description')}}" id="description" name="description">
 									</p>
 								</div>
 								<input type="hidden" :value="permissionsSelected"
