@@ -1022,11 +1022,11 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-__webpack_require__(42);
-__webpack_require__(43);
-__webpack_require__(44);
-__webpack_require__(45);
-module.exports = __webpack_require__(46);
+__webpack_require__(38);
+__webpack_require__(39);
+__webpack_require__(40);
+__webpack_require__(41);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
@@ -1046,7 +1046,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-__webpack_require__(57);
+__webpack_require__(37);
 
 /***/ }),
 /* 12 */
@@ -30092,74 +30092,72 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).setImmediate, __webpack_require__(3).clearImmediate))
 
 /***/ }),
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */
+/* 37 */
 /***/ (function(module, exports) {
 
 var accordions = document.getElementsByClassName('has-submenu');
+//const adminSlideButton = document.getElementById('admin-slideout-button')
+
+//adminSlideButton.onclick = function () {
+//	this.classList.toggle('is-active');
+//	document.getElementById('admin-side-menu').classList.toggle('is-active');
+//}
+
+function setSubmenuStyles(submenu, maxHeight, margins) {
+	submenu.style.maxHeight = maxHeight;
+	submenu.style.marginTop = margins;
+	submenu.style.marginBottom = margins;
+}
 
 for (var i = 0; i < accordions.length; i++) {
+	if (accordions[i].classList.contains('is-active')) {
+		var submenu = accordions[i].nextElementSibling;
+		setSubmenuStyles(submenu, submenu.scrollHeight + "px", "0.75em");
+	}
+
 	accordions[i].onclick = function () {
 		this.classList.toggle('is-active');
 
 		var submenu = this.nextElementSibling;
 		if (submenu.style.maxHeight) {
 			// menu is open, we need to close it now
-			submenu.style.maxHeight = null;
-			submenu.style.marginTop = null;
-			submenu.style.marginBottom = null;
+			setSubmenuStyles(submenu, null, null);
 		} else {
 			// meny is close, so we need to open it
-			submenu.style.maxHeight = submenu.scrollHeight + "px";
-			submenu.style.marginTop = "0.75em";
-			submenu.style.marginBottom = "0.75em";
+			setSubmenuStyles(submenu, submenu.scrollHeight + "px", "0.75em");
 		}
 	};
 }
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
