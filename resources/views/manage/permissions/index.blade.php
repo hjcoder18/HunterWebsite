@@ -24,7 +24,7 @@
 
 	<div class="card">
 		<div class="card-content">
-			<table class="table is-narrow">
+			<table class="table is-striped is-narrow is-fullwidth">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -40,11 +40,10 @@
 						<th>{{$permission->display_name}}</th>
 						<td>{{$permission->name}}</td>
 						<td>{{$permission->description}}</td>
-						<td class="has-text-right"><a
-							class="button is-outlined is-small m-r-5"
-							href="{{route('permissions.show', $permission->id)}}">View</a><a
-							class="button is-outlined is-small"
-							href="{{route('permissions.edit', $permission->id)}}">Edit</a></td>
+						<td class="has-text-right">
+							<a	class="button is-outlined is-success m-r-5 is-small" href="{{route('permissions.show', $permission->id)}}">View</a>
+							<a	class="button is-outlined is-danger m-r-5 is-small"	href="{{route('permissions.edit', $permission->id)}}">Edit</a>
+						</td>
 					</tr>
 					@endforeach
 				</tbody>
