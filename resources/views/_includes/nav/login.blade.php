@@ -1,7 +1,7 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="dropdown navigation">
 	<div class="navbar-brand">
 	    <a class="navbar-item" href="{{route('home')}}">
-	    	<img src="{{asset('images/hunterjmarshall-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
+	    	<img src="{{asset('images/Connect-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
 	    </a>
 	    
 	    @if (Request::segment(1) == "manage")
