@@ -23,14 +23,17 @@
 	<form action="{{route('posts.store')}}" method="POST">
 		{{csrf_field()}}
 		<div class="columns">
-			<div class="column is-three-quarters">
+			<div class="column is-three-quarters-desktop">
 				<b-field>
-		            <b-input placeholder="Post Title" size="is-large">
+		            <b-input type="text" placeholder="Post Title" size="is-large" v-model="title">
 		            </b-input>
 		        </b-field>
-		        <p>{{url('/blog')}}</p>
+		        
+		        <slug-widget url="{{url('/')}}" subdirectory="blog" :title="title" @slug-changed="updateSlug" ></slug-widget>
+		        <input type="hidden" v-model="slug" name="slug" />
+		        
 		        <b-field class="m-t-40">
-		            <b-input type="textarea" placeholder="Compose your blog" rows="20">
+		            <b-input type="textarea" placeholder="Compose your blog post" rows="20">
 		            </b-input>
 		        </b-field>
 		    </div> <!-- end of .column.is-three-quarters -->
@@ -80,7 +83,15 @@
 	<script>
 		var app = new Vue({
 			el: '#app',
-			data: {}
+			data: {
+				title: '',
+				slug: ''
+			},
+			methods: {
+				updateSlug: function(val) {
+					this.slug = val;
+				}
+			}
 		});
 	</script>
 @endsection
