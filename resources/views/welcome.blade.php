@@ -78,9 +78,11 @@
             @endif
 
             <div class="content">
+            	<img src="{{asset('images/Connect-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
                 <div class="title m-b-md">
-                    Hunter Marshall
+                    Connect
                 </div>
+                <p>Where Family and Friends Unit</p>
             </div>
         </div>
     </body>

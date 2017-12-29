@@ -12,14 +12,14 @@
 <div class="flex-container">
 	<div class="columns m-t-10">
 		<div class="column">
-			<h1 class="title">View Permission Details</h1>
+			<h1 class="title">Edit Permission Details</h1>
 		</div>
 		<!-- end of column -->
 
 		<div class="column">
-			<a href="{{route('permissions.edit', $permission->id)}}"
+			<a href="{{route('permissions.show', $permission->id)}}"
 				class="button is-primary is-pulled-right"><i
-				class="fa fa-edit m-r-10"></i> Edit Permission</a>
+				class="fa fa-edit m-r-10"></i> View Permission</a>
 		</div>
 	</div>
 	<hr class="m-t-0">

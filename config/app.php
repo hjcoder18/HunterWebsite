@@ -181,6 +181,7 @@ return [
     	 * Third Party Service Providers
     	 */
     	Laratrust\LaratrustServiceProvider::class,
+    	DevMarketer\EasyNav\EasyNavServiceProvider::class,
     ],
 
     /*
@@ -216,6 +217,7 @@ return [
     	'Laratrust'   => Laratrust\LaratrustFacade::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
+    	'Nav' => DevMarketer\EasyNav\EasyNavFacade::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,

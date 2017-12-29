@@ -1,8 +1,15 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="dropdown navigation">
 	<div class="navbar-brand">
 	    <a class="navbar-item" href="{{route('home')}}">
-	    	<img src="{{asset('images/hunterjmarshall-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
+	    	<img src="{{asset('images/Connect-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
 	    </a>
+	    
+	    @if (Request::segment(1) == "manage")
+	    <a class="navbar-item is-hidden-desktop" id="admin-slideout-button">
+	    	<span class="icon"><i class="fa fa-arrow-circle-o-right"></i></span>
+	    </a>
+	    @endif
+	    
 	    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
 	    	<span></span>
 	      	<span></span>
@@ -41,7 +48,7 @@
 	    
 	    <div class="navbar-end">
 	      	<div class="navbar-item has-dropdown is-hoverable">
-		      	@if (Auth::guest())
+		      	@guest
 		      		<a href="#" class="navbar-item is-tab">Login</a>
 		      		<a href="#" class="navbar-item is-tab">Register</a>
 		      	@else
@@ -73,7 +80,7 @@
 			              	@include('_includes.forms.logout')
 				      	</div>
 				    </div>
-		      	@endif
+		      	@endguest
 	      	</div>
 			
 	    </div>
