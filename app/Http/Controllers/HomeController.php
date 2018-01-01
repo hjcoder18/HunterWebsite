@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use LaraFlash;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        return view('home');
+    	LaraFlash::add()->content('Hello World')->priority(6)->type('Info');
+        LaraFlash::success("YYay it worked!!");
+    	return view('home');
     }
 }
