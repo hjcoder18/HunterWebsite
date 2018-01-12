@@ -12,10 +12,10 @@
 <div class="flex-container">
 	<div class="columns m-t-10">
 		<div class="column">
-			<h1 class="title">This is the posts.index page</h1>
+			<h1 class="title">This is the recipes.index page</h1>
 		</div>
 		<div class="column">
-			<a href="{{route('posts.create')}}" class="button is-primary is-pulled-right">Create New Post</a>
+			<a href="{{route('recipes.create')}}" class="button is-primary is-pulled-right">Create New Recipe</a>
 		</div>
 	</div>
 	<hr class="m-t-0">

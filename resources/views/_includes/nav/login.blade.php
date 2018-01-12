@@ -1,7 +1,7 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="dropdown navigation">
 	<div class="navbar-brand">
-	    <a class="navbar-item" href="{{route('home')}}">
-	    	<img src="{{asset('images/Connect-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
+	    <a class="navbar-item" href="#">
+	    	<img src="{{asset('images/hunterjmarshall-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
 	    </a>
 	    
 	    @if (Request::segment(1) == "manage")
@@ -19,28 +19,28 @@
 	
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 	    <div class="navbar-start">
-	      	<a class="navbar-item" href="{{route('home')}}">
+	      	<a class="navbar-item" href="#about">
 	        	About Me
 		    </a>
-		    <a class="navbar-item" href="#">
+		    <a class="navbar-item" href="#testimonials">
 		        Testimonials
 		    </a>
-		    <a class="navbar-item" href="#">
+		    <a class="navbar-item" href="#contact">
 		        Contact Me
 		    </a>
 		    <div class="navbar-item has-dropdown is-hoverable">
-		    	<a class="navbar-link" href="#">
+		    	<a class="navbar-link" href="#projects">
 		          Project
 		        </a>
 		        <div class="navbar-dropdown is-boxed">
-		          	<a class="navbar-item" href="#">
-		            	Something
+		          	<a class="navbar-item" href="https://misty-river-labs.herokuapp.com">
+		            	MistyRiverLabs
 		          	</a>
-		          	<a class="navbar-item" href="#">
-		            	Something
+		          	<a class="navbar-item" href="http://www.byui.edu/employers-and-schools">
+		            	BYU-I Employers & Schools
 		        	</a>
-		          	<a class="navbar-item" href="#">
-		            	Something
+		          	<a class="navbar-item" href="http://www.elitetrainingpro.org/">
+		            	Elite Training Pro
 		          	</a>
 	        	</div>
 	      	</div>
@@ -49,8 +49,8 @@
 	    <div class="navbar-end">
 	      	<div class="navbar-item has-dropdown is-hoverable">
 		      	@guest
-		      		<a href="#" class="navbar-item is-tab">Login</a>
-		      		<a href="#" class="navbar-item is-tab">Register</a>
+		      		<a href="{{route('login')}}" class="navbar-item is-tab">Family Connect</a>
+		      		<a href="{{route('register')}}" class="navbar-item is-tab">Family Register</a>
 		      	@else
 		      		<a class="navbar-link">
 				      	Hi {{Auth::user()->name}}

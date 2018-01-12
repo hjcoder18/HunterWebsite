@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('welcome', function () {
+	return view('welcome');
+});
+
 Auth::routes();
 
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {
@@ -24,6 +28,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 	Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
 	Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 	Route::resource('/posts', 'PostController');
+	Route::resource('/recipes', 'RecipeController');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

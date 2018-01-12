@@ -13,6 +13,11 @@
 				<a href="{{route('posts.index')}}"class="{{Nav::isResource('posts', 2)}}">Blog Posts</a>
 			</li>
 		</ul>
+		<ul class="menu-list">
+			<li>
+				<a href="{{route('recipes.index')}}"class="{{Nav::isResource('recipes', 2)}}">Recipes</a>
+			</li>
+		</ul>
 
 		<p class="menu-label">Administration</p>
 		<ul class="menu-list">
