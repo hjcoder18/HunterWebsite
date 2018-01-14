@@ -58,20 +58,26 @@
 <div id="about" class="flex-container about">
 	<div class="columns is-centered">
 		<div class="column has-text-centered boxes">
-			<h1 class="title is-4 is-bold">About Me</h1>
-			<p>I am a Web Developer. I specialize in building Web Applications using Laravel, a PHP framework. Currently, I work full time as a QA Specialist for a company called Stukent located out of Rexburg, Idaho.
+			<a href="#">
+				<h1 class="title is-4 is-bold">About Me</h1>
+				<p>To my family. I'm building the web applicaiton you have been asking for. For those not in my family, this is just single place for my family to connect. Think of it as a private social media application.</p>
+			</a>
 		</div>
 		<div class="column has-text-centered boxes">
-			<h1 class="title is-4 is-bold">Services</h1>
-			<ul>
-				<li>Quality Assurance</li>
-				<li>Web Development</li>
-				<li>User Experience</li>
-			</ul>
+			<a href="#">
+				<h1 class="title is-4 is-bold">Services</h1>
+				<ul>
+					<li>Quality Assurance</li>
+					<li>Web Development</li>
+					<li>User Experience</li>
+				</ul>
+			</a>
 		</div>
 		<div class="column has-text-centered boxes">
-			<h1 class="title is-4 is-bold">Site News</h1>
-			<p>To my family. I'm building the web applicaiton you have been asking for. For those not in my family, this is just single place for my family to connect. Think of it as a private social media application.</p>
+			<a href="#">
+				<h1 class="title is-4 is-bold">Site News</h1>
+				<p>To my family. I'm building the web applicaiton you have been asking for. For those not in my family, this is just single place for my family to connect. Think of it as a private social media application.</p>
+			</a>
 		</div>
 	</div>
 
@@ -110,59 +116,61 @@
 </div> <!-- end of .flex-container -->
 
 <div id="contact" class="flex-container contact">
-	<div class="columns">
-		<div class="column is-one-third has-text-centered"></div>
-		<div class="column is-one-third has-text-centered">
-			<h1 class="title" style="color:#B2600E;">Contact</h1>
-			<div class="field">
-			  <label class="label" style="color:#B2600E;">Name</label>
-			  <div class="control">
-			    <input class="input" type="text" placeholder="Text input">
-			  </div>
-			</div>
-			
-			<div class="field">
-			  <label class="label" style="color:#B2600E;">Email</label>
-			  <div class="control has-icons-left has-icons-right">
-			    <input class="input" type="email" placeholder="Email input" value="hello@">
-			    <span class="icon is-small is-left">
-			      <i class="fa fa-envelope"></i>
-			    </span>
-			    <span class="icon is-small is-right">
-			      <i class="fa fa-warning"></i>
-			    </span>
-			  </div>
-			</div>
-			
-			<div class="field">
-			  <label class="label" style="color:#B2600E;">Subject</label>
-			  <div class="control has-text-centered">
-			    <div class="select">
-			      <select>
-			        <option>Select dropdown</option>
-			        <option>With options</option>
-			      </select>
-			    </div>
-			  </div>
-			</div>
-			
-			<div class="field">
-			  <label class="label" style="color:#B2600E;">Message</label>
-			  <div class="control">
-			    <textarea class="textarea" placeholder="Textarea"></textarea>
-			  </div>
-			</div>
-			
-			<div class="field is-grouped">
-			  <div class="control">
-			    <button class="button is-link">Submit</button>
-			  </div>
-			  <div class="control">
-			    <button class="button is-text">Cancel</button>
-			  </div>
+	<form action="{{route('welcome.store')}}" method="POST">
+		{{csrf_field()}}
+		<div class="columns">
+			<div class="column is-one-third has-text-centered"></div>
+			<div class="column is-one-third has-text-centered">
+				<h1 class="title" style="color:#B2600E;">Contact</h1>
+				<div class="field">
+				  <label class="label" style="color:#B2600E;">Name</label>
+				  <div class="control">
+				    <input class="input" name="name" type="text" placeholder="Text input">
+				  </div>
+				</div>
+				
+				<div class="field">
+				  <label class="label" style="color:#B2600E;">Email</label>
+				  <div class="control has-icons-left has-icons-right">
+				    <input class="input" name="email" type="email" placeholder="Email input" value="hello@">
+				    <span class="icon is-small is-left">
+				      <i class="fa fa-envelope"></i>
+				    </span>
+				    <span class="icon is-small is-right">
+				      <i class="fa fa-warning"></i>
+				    </span>
+				  </div>
+				</div>
+				
+				<div class="field">
+				  <label class="label" style="color:#B2600E;">Subject</label>
+				  <div class="control has-text-centered">
+				    <div class="select">
+				      <select name="subject">
+				        <option>Select dropdown</option>
+				        <option>With options</option>
+				      </select>
+				    </div>
+				  </div>
+				</div>
+				
+				<div class="field">
+				  <label class="label" style="color:#B2600E;">Message</label>
+				  <div class="control">
+				    <textarea class="textarea" name="bodyMessage" placeholder="Textarea"></textarea>
+				  </div>
+				</div>
+				
+				<div class="field is-grouped">
+				  <div class="control">
+				    <button class="button is-link">Submit</button>
+				  </div>
+				  <div class="control">
+				    <button class="button is-text">Cancel</button>
+				  </div>
+				</div>
 			</div>
 		</div>
-	</div>
-
+	</form>
 </div> <!-- end of .flex-container -->
 @endsection

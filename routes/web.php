@@ -32,3 +32,4 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/welcome', 'WelcomeController');
