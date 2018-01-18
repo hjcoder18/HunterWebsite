@@ -58,13 +58,13 @@
 <div id="about" class="flex-container about">
 	<div class="columns is-centered">
 		<div class="column has-text-centered boxes">
-			<a href="#">
+			<a href="about">
 				<h1 class="title is-4 is-bold">About Me</h1>
 				<p>To my family. I'm building the web applicaiton you have been asking for. For those not in my family, this is just single place for my family to connect. Think of it as a private social media application.</p>
 			</a>
 		</div>
 		<div class="column has-text-centered boxes">
-			<a href="#">
+			<a href="services">
 				<h1 class="title is-4 is-bold">Services</h1>
 				<ul>
 					<li>Quality Assurance</li>
@@ -74,7 +74,7 @@
 			</a>
 		</div>
 		<div class="column has-text-centered boxes">
-			<a href="#">
+			<a href="blog">
 				<h1 class="title is-4 is-bold">Site News</h1>
 				<p>To my family. I'm building the web applicaiton you have been asking for. For those not in my family, this is just single place for my family to connect. Think of it as a private social media application.</p>
 			</a>

@@ -18,6 +18,18 @@ Route::get('/', function () {
 Route::get('welcome', function () {
 	return view('welcome');
 });
+Route::get('projects', function () {
+	return view('projects');
+});
+Route::get('about', function () {
+	return view('about');
+});
+Route::get('services', function () {
+	return view('services');
+});
+Route::get('blog', function () {
+	return view('blog');
+});
 
 Auth::routes();
 

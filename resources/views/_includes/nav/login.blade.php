@@ -1,6 +1,6 @@
 <nav class="navbar has-shadow" role="navigation" aria-label="dropdown navigation">
 	<div class="navbar-brand">
-	    <a class="navbar-item" href="#">
+	    <a class="navbar-item" href="/">
 	    	<img src="{{asset('images/hunterjmarshall-logo.png')}}" alt="Hunter J Marshall Logo" width="80" height="100">
 	    </a>
 	    
@@ -19,7 +19,7 @@
 	
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 	    <div class="navbar-start">
-	      	<a class="navbar-item" href="#about">
+	      	<a class="navbar-item" href="about">
 	        	About Me
 		    </a>
 		    <a class="navbar-item" href="#testimonials">
@@ -29,7 +29,7 @@
 		        Contact Me
 		    </a>
 		    <div class="navbar-item has-dropdown is-hoverable">
-		    	<a class="navbar-link" href="#projects">
+		    	<a class="navbar-link" href="projects">
 		          Project
 		        </a>
 		        <div class="navbar-dropdown is-boxed">
